@@ -20,6 +20,8 @@
 # http://git.videolan.org/?p=vlc-ports/android.git;a=summary
 
 #----------
+export ANDROID_NDK="/Users/chenpeng/Desktop/work_space/ndk/android-ndk-r10e"
+
 UNI_BUILD_ROOT=`pwd`
 FF_TARGET=$1
 FF_TARGET_EXTRA=$2
