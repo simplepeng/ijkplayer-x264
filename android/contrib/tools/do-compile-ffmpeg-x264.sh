@@ -259,18 +259,13 @@ fi
 
 # with libx264
 if [ -f "${FF_DEP_X264_LIB}/libx264.a" ]; then
-    echo "---------- libx264 detected --------------"
-    echo "------------------------------------------"
-    echo "------------------------------------------"
-    echo "------------------------------------------"
+    echo "libx264 detected"
     FF_CFG_FLAGS="$FF_CFG_FLAGS --enable-libx264"
         FF_CFG_FLAGS="$FF_CFG_FLAGS --enable-encoder=libx264"
     FF_CFLAGS="$FF_CFLAGS -I${FF_DEP_X264_INC}"
     FF_DEP_LIBS="$FF_DEP_LIBS -L${FF_DEP_X264_LIB} -lx264"
     export PKG_CONFIG_PATH="$FF_DEP_X264_LIB/pkgconfig":$FF_PREFIX/lib/pkgconfig
         echo $PKG_CONFIG_PATH
-else
-     echo "---------- libx264.a not found --------------"
 fi
 
 if [ -f "${FF_DEP_LIBSOXR_LIB}/libsoxr.a" ]; then
@@ -294,13 +289,9 @@ FF_CFG_FLAGS="$FF_CFG_FLAGS --target-os=linux"
 FF_CFG_FLAGS="$FF_CFG_FLAGS --enable-pic"
 # FF_CFG_FLAGS="$FF_CFG_FLAGS --disable-symver"
 
-if [ "$FF_ARCH" = "x86" ]; then
-    FF_CFG_FLAGS="$FF_CFG_FLAGS --disable-asm"
-else
 # Optimization options (experts only):
 FF_CFG_FLAGS="$FF_CFG_FLAGS --enable-asm"
 FF_CFG_FLAGS="$FF_CFG_FLAGS --enable-inline-asm"
-fi
 
 case "$FF_BUILD_OPT" in
     debug)

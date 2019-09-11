@@ -15,8 +15,10 @@
 # limitations under the License.
 #
 
-IJK_x264_UPSTREAM=http://git.videolan.org/git/x264.git
-IJK_x264_FORK=http://git.videolan.org/git/x264.git
+# IJK_x264_UPSTREAM=http://git.videolan.org/git/x264.git
+# IJK_x264_FORK=http://git.videolan.org/git/x264.git
+IJK_x264_UPSTREAM=https://code.videolan.org/videolan/x264.git
+IJK_x264_FORK=https://code.videolan.org/videolan/x264.git
 
 IJK_x264_LOCAL_REPO=extra/x264
 
